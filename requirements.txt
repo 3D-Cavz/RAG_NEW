@@ -6,3 +6,7 @@ qdrant-client
 langchain-community
 pypdf
 python-dotenv
+fastapi
+uvicorn
+gunicorn
+langchain_qdrant
