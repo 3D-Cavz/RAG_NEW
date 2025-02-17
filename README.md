@@ -22,15 +22,9 @@ Start the server:
 python main.py
 ```
 
-## Deployment
-This project is deployed on [Vercel](https://rag-new-wine.vercel.app).
 
-## Contributing
-Feel free to open issues or submit pull requests.
 
 ## License
 This project is licensed under the MIT License.
 
----
 
-Let me know if you want to customize any section or add more details!
