@@ -1,8 +1,8 @@
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 from langchain_qdrant import Qdrant
-from src.config import QDRANT_URL, QDRANT_API_KEY, COLLECTION_NAME
-from src.embeddings import load_embedding_model
+from config import QDRANT_URL, QDRANT_API_KEY, COLLECTION_NAME
+from embeddings import load_embedding_model
 
 client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, prefer_grpc=False)
 embeddings = load_embedding_model()

@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI, Query
-from src.qdrant_db import search_query
-from src.youtube_search import search_youtube
+from qdrant_db import search_query
+from youtube_search import search_youtube
 
 app = FastAPI()
 
@@ -10,12 +10,15 @@ def home():
     return {"message": "Welcome to RAG System"}
 
 @app.get("/search/")
-def search(query: str = Query(..., description="Query text"), search_type: str = "rag"):
-    if search_type == "youtube":
-        return {"query": query, "result": search_youtube(query)}
-    else:
-        results = search_query(query)
-        return {"query": query, "results": results}
+def search(query: str = Query(..., description="Query text")):
+    rag_results = search_query(query)  # Search in RAG system
+    youtube_results = search_youtube(query)  # Search on YouTube
+
+    return {
+        "query": query,
+        "rag_results": rag_results,
+        "youtube_results": youtube_results
+    }
 
 if __name__ == "__main__":
     import uvicorn

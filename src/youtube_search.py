@@ -1,5 +1,5 @@
 import requests
-from src.config import YOUTUBE_API_KEY
+from config import YOUTUBE_API_KEY
 
 def search_youtube(query):
     url = "https://www.googleapis.com/youtube/v3/search"
