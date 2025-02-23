@@ -9,4 +9,5 @@ python-dotenv
 fastapi
 uvicorn
 gunicorn
+streamlit
 langchain_qdrant
